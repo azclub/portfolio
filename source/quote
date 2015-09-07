@@ -1,0 +1,12 @@
+    <figure class="quote">
+      <!-- <picture class="quote__logo">
+        <%= image_tag("logos/magnetic.png") %>
+      </picture> -->
+      <div class="quote__text">
+        <div class="quote__label">
+          CLIENT QUOTE
+        </div>
+        Helen is awesome at what she does. She's very easy to work, she does exactly what you ask her. This is the second time I worked with her and I'm extremely pleased with job she did.
+        <aside class="quote__from">— Sverige Kreativ</aside>
+      </div>
+    </figure>

@@ -1,0 +1,64 @@
+// Fonts
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,400,900);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300italic);
+
+$sans:   'Source Sans Pro', 'Helvetica', 'Aria', serif;
+$serif:  'Merriweather', 'Times', sans-serif;
+
+// Color
+$black: #333333;
+$white: #FFFFFF;
+
+// Screen size
+$mobile: 680px;
+$tablet: 1024px;
+
+
+// Helper
+%clean-list-style{
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+%clean-link-style{
+  text-decoration: none;
+}
+
+// Mixin
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*10}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+  
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
+}

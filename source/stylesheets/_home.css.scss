@@ -1,0 +1,123 @@
+// home
+.home{
+  @inlcude rem(max-width, 117);
+  @include rem(margin, 0, 2);
+  @include legacy-pie-clearfix;
+
+  @media screen and (min-width: $mobile){
+    margin: 0 10%;
+  }
+}
+
+// class_name background_color has_background_image?
+$works: magnetic-asia #D6272D true, 
+        etechevent #FFFFFF false,
+        cigna #FFFFFF false,
+        kitesystems #F05623 false,
+        ticketflap #E5E6E2 false,
+        yourmum #EC6EA5 false,
+        payou #FFFFFF false,
+        clockenflap #19E0FC true,
+        wellesley #0D082A true,
+        central-health-child-development-team #FFFFFF true;
+
+@each $work in $works{
+  $name:   nth($work, 1);
+  $color:  nth($work, 2);
+  $bg-img: nth($work, 3);
+  .#{$name}{
+    @include background-size(cover);
+    background-color: $color;
+    @if $bg-img == true{
+      background-image: image_url('home/#{$name}.png');
+    }
+  } 
+}
+
+
+.work{
+  @include rem(padding, 0, 5);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 270px;
+  // @media screen and (min-width: 600px){
+  //   float: left;
+  //   width: 33.3%;
+  // }
+  @media screen and (min-width: 1024px){
+    float: left;
+    width: 33.3%;
+  }
+  //   width: 25%;
+  // }
+}
+
+
+.work__image{
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nomineed{
+  &:before{
+    content: '';
+
+  }
+}
+
+.logo{
+  display: table-cell;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.ticketflap{
+  .logo{
+    margin-top: 30px;
+  }
+}
+
+
+
+// Quote
+.quote{
+  @include rem(padding, 3);
+  @include legacy-pie-clearfix;
+  text-align: left;
+}
+
+.quote__label{
+  font-family: $sans;
+  color: #AAAAAA;
+  @include font-size(1.2);
+  font-style: normal;
+  @include rem(margin-bottom, 1);
+}
+
+.quote__logo{
+  float: left;
+  max-width: 180px;
+  background: #eeeeee;
+}
+
+.quote__text{
+  @extend %body-text;
+  // width: calc(100% - 210px);
+  float: right;
+  @include rem(margin-left, 2);
+}
+
+.quote__from{
+  @include rem(margin-top, 1.5);
+  @include font-size(1.4);
+  font-style: normal;
+  display: block;
+}
+
+
+
+
+

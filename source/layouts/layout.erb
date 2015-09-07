@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Helen Fung" %></title>
+    
+    <%= stylesheet_link_tag "app" %>
+    <%= javascript_include_tag  "all" %>
+  </head>
+  
+
+
+  <body class="<%= page_classes %>">
+    <header class="site__header">
+      <ul class="site__nav">
+        <li>
+          <% link_to("/", :class => 'nav__link' ) do %>
+          Helen Fung
+          <aside class="site__tagline">
+            Web Designer &amp; Frontend
+          </aside>
+          <% end %>
+        </li>
+        <li><%= link_to("WORKS", "/" , :class => 'nav__link') %></li>
+        <li><%= link_to("RESUME", "/resume" , :class => 'nav__link') %></li>
+      </ul>
+    </header>
+    <%= yield %>
+  </body>
+</html>

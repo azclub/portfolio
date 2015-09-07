@@ -1,0 +1,15 @@
+---
+
+---
+<section class="home">
+  <% data.works.work.each do |f| %>
+    <% link_to("/works/#{f.name.parameterize}") do %>
+      <figure class="work <%=f.name.parameterize%>">
+        <picture class="work__image">
+          <div class="logo">
+            <%= image_tag("logos/#{f.name.parameterize}.png") %></div>
+        </picture>
+      </figure>
+    <% end %>
+  <% end %>
+</section>

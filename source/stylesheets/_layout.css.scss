@@ -1,0 +1,42 @@
+// header
+.site__header{
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $white;
+  
+  .site__nav{
+    margin: 0;
+    display: inline-block;
+  }
+}
+
+.site__nav{
+  @extend %clean-list-style;
+
+  li{
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+
+.site__tagline{
+  display: block;
+  font-weight: normal;
+  @include font-size(1.2);
+}
+
+.nav__link{
+  @extend %clean-link-style;
+  @include font-size(2.4);
+  font-weight: 900;
+  color: $black;
+  display: block;
+  @include rem(padding, 3);
+
+  &.active{
+    text-decoration: line-through;
+  }
+}
