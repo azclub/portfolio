@@ -11,15 +11,16 @@
 
 // class_name background_color has_background_image?
 $works: magnetic-asia #D6272D true, 
-        etechevent #FFFFFF false,
-        cigna #FFFFFF false,
+        etechevent #29abe2 true,
+        cigna #50af45 true,
         kitesystems #F05623 false,
         ticketflap #E5E6E2 false,
-        yourmum #EC6EA5 false,
-        payou #FFFFFF false,
+        yourmum #EC6EA5 true,
+        payou #39A965 true,
         clockenflap #19E0FC true,
         wellesley #0D082A true,
-        central-health-child-development-team #FFFFFF true;
+        central-health-child-development-team #FFFFFF true,
+        propellar #FFFFFF true;
 
 @each $work in $works{
   $name:   nth($work, 1);
@@ -29,18 +30,20 @@ $works: magnetic-asia #D6272D true,
     @include background-size(cover);
     background-color: $color;
     @if $bg-img == true{
-      background-image: image_url('home/#{$name}.png');
+      background-image: image_url('home/#{$name}.jpg');
     }
   } 
 }
 
 
 .work{
-  @include rem(padding, 0, 5);
+  @include rem(padding, 0, 10);
   text-align: center;
+  position: relative;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 270px;
+  height: 300px;
+  display: table;
   // @media screen and (min-width: 600px){
   //   float: left;
   //   width: 33.3%;
@@ -51,6 +54,36 @@ $works: magnetic-asia #D6272D true,
   }
   //   width: 25%;
   // }
+}
+
+.award{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 90px;
+  height: 135px;
+}
+
+.nominee{
+  background-image: image_url('awwwards_nominee.png');
+  @media only screen 
+  and (-Webkit-min-device-pixel-ratio: 1.5), only screen 
+  and (-moz-min-device-pixel-ratio: 1.5), only screen 
+  and (-o-min-device-pixel-ratio: 3/2), only screen 
+  and (min-device-pixel-ratio: 1.5) {
+    background-image: image_url('awwwards_nominee@2x.png');
+  }
+}
+
+.work___title{
+  font-family: $sans;
+  display: table-cell;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 60px;
 }
 
 

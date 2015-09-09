@@ -7,8 +7,14 @@
       <figure class="work <%=f.name.parameterize%>">
         <picture class="work__image">
           <div class="logo">
-            <%= image_tag("logos/#{f.name.parameterize}.png") %></div>
+            <%= image_tag("logos/#{f.name.parameterize}.png", :alt => f.name) %>
+          </div>
         </picture>
+        <% if f.award %>
+          <div class="award <%=f.award.parameterize%>">
+            
+          </div>
+        <% end %>
       </figure>
     <% end %>
   <% end %>

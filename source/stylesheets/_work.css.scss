@@ -1,10 +1,34 @@
+$works: magnetic-asia #D6272D true, 
+        etechevent #00BDF5 true,
+        cigna #FFFFFF false,
+        kitesystems #F05623 false,
+        ticketflap #E5E6E2 false,
+        yourmum #EC6EA5 false,
+        payou #FFFFFF false,
+        clockenflap #19E0FC true,
+        wellesley #0D082A true,
+        central-health-child-development-team #FFFFFF true;
+
+@each $work in $works{
+  $name:   nth($work, 1);
+  $color:  nth($work, 2);
+  $bg-img: nth($work, 3);
+  .work__detail.#{$name}{
+    @include background-size(cover);
+    background-color: $color;
+    @if $bg-img == true{
+      background-image: image_url('works/#{$name}/bg.png');
+    }
+  } 
+}
+
 .work__detail{
   @include rem(padding, 5, 0, 3);
   background-attachment: fixed;
 }
 
 .work__header{
-  a{
+a{
     display: inline-block;
     @include rem(padding, 3, 2);
     text-decoration: none;

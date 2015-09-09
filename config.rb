@@ -35,6 +35,8 @@ end
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+activate :directory_indexes
+
 data.works.work.each do |work|
   proxy "/works/#{work[:name].parameterize}.html", "work.html", :locals => {
     :name => work[:name],
