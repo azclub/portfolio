@@ -16,25 +16,12 @@
       <a href="http://<%=url%>" target="_blank" class="work__site"><%=url%></a>
 
       <p class="work__desc"><%=desc%></p>
-
-<!--       <div class="work__nav">
-        <div class="work__pre">
-          PREVIOUS
-
-
-          
-        </div>
-
-        <div class="work__next">
-          NEXT
-        </div>
-      </div> -->
     </div>
 
     <div class="work__photos">
 
       <% photos.each do |f| %>
-        <%= image_tag("works/#{name.parameterize}/#{f.photo.parameterize}.#{f.photo.format.parameterize}") %> 
+        <%= image_tag("works/#{name.parameterize}/#{f.photo.parameterize}.jpg", :alt => '#{f.photo}') %> 
       <% end %>
     </div>
   </div>

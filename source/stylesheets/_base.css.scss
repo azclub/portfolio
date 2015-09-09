@@ -33,6 +33,10 @@ img{
   text-align: left;
 }
 
+%container{
+  @include rem(max-width, 117);
+}
+
 
 //Button
 .btn{

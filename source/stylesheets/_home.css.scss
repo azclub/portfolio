@@ -1,6 +1,5 @@
 // home
 .home{
-  @inlcude rem(max-width, 117);
   @include rem(margin, 0, 2);
   @include legacy-pie-clearfix;
 

@@ -1,8 +1,10 @@
 work:
 - name: "Magnetic Asia"
   photos: 
-  - photo: 'home'
-    format: 'png'
+  - photo: 'Home'
+  - photo: 'Our Brands'
+  - photo: 'Clockenflap'
+  - photo: 'Corporate events'
   url: "www.magneticasia.com"
   desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
 
@@ -19,22 +21,6 @@ work:
   desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
 
 - name: "Cigna"
-
-- name: "Wellesley"
-  award: "nominee"
-
-- name: "Payou"
-
-
-- name: "YourMum" 
-  award: "nominee"
-
-- name: "Clockenflap"
-
-
-- name: "Central Health Child Development Team"
-
-- name: "Propellar" 
   photos: 
   - photo: 'Name Card'
     format: 'jpg'
@@ -42,5 +28,81 @@ work:
     format: 'png'
   - photo: 'home'
     format: 'png'
-  url: "www.etechevent.com"
+  url: "www.cigna.com.hk"
   desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+
+
+- name: "Wellesley"
+  award: "nominee"
+  photos: 
+  - photo: 'Name Card'
+    format: 'jpg'
+  - photo: 'Logo studies'
+    format: 'png'
+  - photo: 'home'
+    format: 'png'
+  url: "www.wellesleys.com"
+  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+
+
+- name: "Payou"
+  photos: 
+  - photo: 'Name Card'
+    format: 'jpg'
+  - photo: 'Logo studies'
+    format: 'png'
+  - photo: 'home'
+    format: 'png'
+  # url: "www.etechevent.com"
+  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+
+
+
+- name: "YourMum" 
+  award: "nominee"
+  photos: 
+  - photo: 'Name Card'
+    format: 'jpg'
+  - photo: 'Logo studies'
+    format: 'png'
+  - photo: 'home'
+    format: 'png'
+  url: "www.yourmummusic.com"
+  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+
+
+- name: "Clockenflap"
+  photos: 
+  - photo: 'Name Card'
+    format: 'jpg'
+  - photo: 'Logo studies'
+    format: 'png'
+  - photo: 'home'
+    format: 'png'
+  url: "www.clockenflap.com"
+  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+
+
+
+# - name: "Central Health Child Development Team"
+#   photos: 
+#   - photo: 'Name Card'
+#     format: 'jpg'
+#   - photo: 'Logo studies'
+#     format: 'png'
+#   - photo: 'home'
+#     format: 'png'
+#   url: "www.etechevent.com"
+#   desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+
+
+# - name: "Propellar" 
+#   photos: 
+#   - photo: 'Name Card'
+#     format: 'jpg'
+#   - photo: 'Logo studies'
+#     format: 'png'
+#   - photo: 'home'
+#     format: 'png'
+#   url: "www.propellarcrowdplus.com"
+#   desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
