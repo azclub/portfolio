@@ -2,85 +2,92 @@ work:
 - name: "Magnetic Asia"
   photos: 
   - photo: 'Home'
+    format: 'jpg'
   - photo: 'Our Brands'
+    format: 'jpg'
   - photo: 'Clockenflap'
+    format: 'jpg'
   - photo: 'Corporate events'
+    format: 'jpg'
   url: "www.magneticasia.com"
-  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach."
 
 - name: "Etechevent" 
   award: "nominee"
   photos: 
-  - photo: 'Name Card'
-    format: 'jpg'
+  - photo: 'Landing page'
+    format: 'png'
   - photo: 'Logo studies'
     format: 'png'
-  - photo: 'home'
-    format: 'png'
+  - photo: 'Name Card'
+    format: 'jpg'
   url: "www.etechevent.com"
-  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+  desc: "An event management company specialized in RFID technology for crowd control and payment processing."
 
-- name: "Cigna"
-  photos: 
-  - photo: 'Name Card'
-    format: 'jpg'
-  - photo: 'Logo studies'
-    format: 'png'
-  - photo: 'home'
-    format: 'png'
-  url: "www.cigna.com.hk"
-  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+# - name: "Cigna"
+#   photos: 
+#   - photo: 'Name Card'
+#     format: 'jpg'
+#   - photo: 'Logo studies'
+#     format: 'png'
+#   - photo: 'home'
+#     format: 'png'
+#   url: "www.cigna.com.hk"
+#   desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
 
 
 - name: "Wellesley"
   award: "nominee"
   photos: 
-  - photo: 'Name Card'
-    format: 'jpg'
-  - photo: 'Logo studies'
+  - photo: 'Landing Page'
     format: 'png'
-  - photo: 'home'
+  - photo: 'About us'
     format: 'png'
-  url: "www.wellesleys.com"
-  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
-
+  - photo: 'Practice'
+    format: 'png'
+  - photo: 'Service'
+    format: 'png'
+  - photo: 'Contact'
+    format: 'png'
+  desc: "Wellesley Partners is a financial services executive search within Asia. "
 
 - name: "Payou"
   photos: 
-  - photo: 'Name Card'
+  - photo: 'Visual flowchat'
+    format: 'png'
+  - photo: 'app design'
+    format: 'png'
+  - photo: 'app design iphone'
     format: 'jpg'
-  - photo: 'Logo studies'
-    format: 'png'
-  - photo: 'home'
-    format: 'png'
   # url: "www.etechevent.com"
-  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
-
+  desc: "Payou is a Peer-to-Peer (P2P) mobile payment App with social network component in Hong Kong. It provides a simple, convenient and most fun way for friends to settle debts and pay money to each other.
+<br/><br/>
+Basically, users can make payment to their friends through Payou, with a payment descriptor and/or a photo attached. They can choose to make it public on the newsfeed, and share with everyone within the social network."
 
 
 - name: "YourMum" 
   award: "nominee"
   photos: 
-  - photo: 'Name Card'
-    format: 'jpg'
-  - photo: 'Logo studies'
+  - photo: 'Landing page'
+    format: 'png'
+  - photo: 'event'
     format: 'png'
   - photo: 'home'
     format: 'png'
   url: "www.yourmummusic.com"
-  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+  desc: "Yourmum is a professional music show host who brings a combination of new and established international artists to Hong Kong."
 
 
 - name: "Clockenflap"
   photos: 
-  - photo: 'Name Card'
-    format: 'jpg'
-  - photo: 'Logo studies'
+  - photo: 'history page'
     format: 'png'
-  - photo: 'home'
+  - photo: 'artist page'
+    format: 'png'
+  - photo: 'landing page'
     format: 'png'
   url: "www.clockenflap.com"
-  desc: "Magnetic Asia is an event and entertainment solutions house based in Hong Kong, with a regional reach. We manage our own brands as well as provide a range of related services to a handpicked selection of external clients."
+  desc: "Clockenflap is Hong Kong’s largest and longest-running outdoor music and arts festival. A major highlight of the city’s annual cultural calendar."
 
 
 

@@ -1,22 +1,65 @@
 // home
-.home{
+
+// .home,
+.hero{
   @include rem(margin, 0, 2);
   @include legacy-pie-clearfix;
+  display: table;
+  table-layout: fixed;
 
+  height: 75vh;
+
+  p{
+    @extend %body-text;
+    @include rem(margin-top, 1);
+    color: #666666;
+  }
   @media screen and (min-width: $mobile){
-    margin: 0 10%;
+    margin: auto;
   }
 }
+#homeCanvas{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.hero__content{
+  display: table-cell;
+  vertical-align: middle;
+
+  p{
+    @media screen and (min-width: $mobile){
+      text-align: center
+    }
+  }
+
+  .section__title{
+    font-weight: 600;
+    @include font-size(4.8);
+    @media screen and (min-width: $mobile){
+      @include font-size(6.4);
+    }
+  } 
+}
+
+
+
 
 // class_name background_color has_background_image?
 $works: magnetic-asia #D6272D true, 
-        etechevent #29abe2 true,
+        etechevent $black true,
         cigna #50af45 true,
         kitesystems #F05623 false,
         ticketflap #E5E6E2 false,
-        yourmum #EC6EA5 true,
+        yourmum $black true,
         payou #39A965 true,
-        clockenflap #19E0FC true,
+        clockenflap $black true,
         wellesley #0D082A true,
         central-health-child-development-team #FFFFFF true,
         propellar #FFFFFF true;
@@ -26,30 +69,55 @@ $works: magnetic-asia #D6272D true,
   $color:  nth($work, 2);
   $bg-img: nth($work, 3);
   .#{$name}{
-    @include background-size(cover);
+    // @include background-size(cover);
     background-color: $color;
-    @if $bg-img == true{
-      background-image: image_url('home/#{$name}.jpg');
-    }
+    // @if $bg-img == true{
+      // background-image: image_url('home/#{$name}.jpg');
+    // }
   } 
 }
 
-
-.work{
-  @include rem(padding, 0, 10);
-  text-align: center;
-  position: relative;
+.work__background--small{
+  @include transition(.25s);
+  @include background-size(cover);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+
+
+.work{
+  text-align: center;
+  position: relative;
   height: 300px;
   display: table;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+
+  &:hover,
+  &:focus{
+    .work__background--small{
+      @include transform(scale(1.1));
+    }
+
+    .logo{
+      @include transform(scale(.9));
+    }
+  }
   // @media screen and (min-width: 600px){
   //   float: left;
   //   width: 33.3%;
   // }
   @media screen and (min-width: 1024px){
     float: left;
-    width: 33.3%;
+    width: 33.33%;
   }
   //   width: 25%;
   // }
@@ -61,10 +129,12 @@ $works: magnetic-asia #D6272D true,
   top: 10px;
   width: 90px;
   height: 135px;
+  z-index: 5;
 }
 
 .nominee{
   background-image: image_url('awwwards_nominee.png');
+  background-size: 90px 135px;
   @media only screen 
   and (-Webkit-min-device-pixel-ratio: 1.5), only screen 
   and (-moz-min-device-pixel-ratio: 1.5), only screen 
@@ -89,6 +159,8 @@ $works: magnetic-asia #D6272D true,
 .work__image{
   display: table;
   text-align: center;
+  position: relative;
+  z-index: 2;
   width: 100%;
   height: 100%;
 }
@@ -102,8 +174,13 @@ $works: magnetic-asia #D6272D true,
 
 .logo{
   display: table-cell;
+  @include transition(1.5s);
   vertical-align: middle;
   margin: auto;
+  -webkit-backface-visibility: hidden;
+  img{
+    @include rem(max-width, 20);
+  }
 }
 
 .ticketflap{

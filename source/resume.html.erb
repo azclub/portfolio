@@ -4,15 +4,129 @@
 
 <section class="resume__container">
 
-  <h2 class="section__title">EXPERIENCE</h2>
+  <h1 class="section__title">Helen Fung</h1>  
+  <div class="section__content">
+    <div class="resume__photo">
+      <%= image_tag("resume_photo.jpg", :alt => "Picture of Helen Fung") %>
+    </div>  
+    <div class="resume__summary">
+      I’m a <b>Web designer</b> base in Hong Kong. I love learning new technology and apply them to improve my work quality.<br/><br/>
+
+      I’m passionate for front-end technology, video games and learning new things.
+      <div class="resume__contact">
+        <a href="#" class="contact__linkedin">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <span class="sr-only">linkedin</span>
+        </a>
+          
+        <a href="#" class="contact__email">
+          <i class="fa fa-envelope"></i>
+          helen.y.fung@gmail.com</a>
+      </div>
+    </div>
 
 
-  <h2 class="section__title">SKILL SET</h2>
+  </div>
 
-  <h2 class="section__title">LANGUAGE</h2>
+  <h2 class="section__title">Experience</h2>  
 
-  <h2 class="section__title">AWARDS</h2>
+  <div class="section__content">
+    <div class="job__company">
+      <div class="company__label">Company</div>
+      <h3 class="company__name">Kite Systems</h3>
+      <aside class="company__time">From February 2014</aside>
+    </div>
 
-  <a class="btn">DOWNLOAD PDF</a>
+    <div class="job__summary">
+      <h4 class="job__title">
+        Web, UX/UI Designer &amp; Frontend Developer
+      </h4>
+      <p class="job__content">
+        In my role, I am responsible to create design and UX flow for new sites, mobile apps and presentations. Usually I am involve in the development process by providing documentations for wire frames, style guide, and some times just change my rode as a front-end developer.<br/><br/>
+
+        My job satisfaction is to deliver project that excel client expectation.
+        <br>
+
+        <h4 class="job__title">Challenage</h4>
+        － Original designed JQuery plugin to fullfill design requirements.<br/>
+        － Meetings requirements and deliver the project within tight deadline.<br/>
+        － Adopt and iterate multiple UI style to meet the project's end goal.<br/><br/>
+      </p>
+
+
+      <h4 class="job__title">
+        Awards
+      </h4>
+
+      <div class="job__content">
+        
+        <div class="awards">
+          <div class="awards__logo">
+            <%= image_tag("resume/award-1.png", :alt => "") %>
+          </div>
+          
+          <div class="awards__desc">
+            <h4 class="awards__title">Awwards nominee x 3</h4>
+            <p>
+              The awards for design, creativity and innovation on the Internet
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.job__content -->
+    </div><!-- /.job__summary -->
+  </div><!-- /.section__content -->
+
+
+  <h2 class="section__title">Skills</h2>
+  <div class="section__content">
+  <% data.resume.skills.each do |f| %>
+    <div class="skill-group">
+
+      <h3 class="skill-group__title">
+        <%= f.title %>
+      </h3>
+
+
+      <% f.skill.each do |i| %>
+
+        <div class="skill">
+          <h4 class="skill__title"> <%= i.title %></h4>
+
+          <% if i.learning %>
+            <div class="skill__level" data-level="<%= i.learning %>">
+              <!-- <span class="skill__label">Learning</span> -->
+
+            <div class="skill__level--target" data-level="<%= i.target %>">
+              <!-- <span class="skill__label">Target</span> -->
+            </div>
+            </div>
+          <% else %>
+
+            <% i.level.each do |t| %>
+              
+              <div class="skill__level" style="width: <%= t.progress %>%">
+                <!-- <span class="skill__label"><%= t.label %></span> -->
+              </div>
+
+            <% end %>
+
+          <% end %>
+
+        </div>
+      <% end %>
+      
+    </div>
+
+
+  <% end %>
+
+    
+
+  </div>
+
+
+
+
 
 </section>

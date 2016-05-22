@@ -1,0 +1,83 @@
+skills:
+- title: 'Design tools'
+  skill:
+    - title: 'Paper & Pen'
+      level: 
+        - label: 'Un stoppable'
+          progress: 93
+
+    - title: 'Photoshop'
+      level: 
+        - label: 'Capable for every thing'
+          progress: 95
+
+    - title: 'Sketch 3 Pro'
+      level: 
+        - label: 'Great for pixel perfect wireframes'
+          progress: 100
+
+    - title: 'Axure'
+      level: 
+        - label: 'Design the logic'
+          progress: 85
+
+    - title: 'illustrator'
+      level: 
+        - label: 'Un stoppable'
+          progress: 78
+
+    - title: 'After Effect'
+      level: 
+        - label: 'Still learning'
+          progress: 50
+
+- title: 'Programming'
+  skill:
+    - title: 'HTML'
+      level: 
+        - label: 'Website'
+          progress: 90
+
+    - title: 'CSS'
+      level: 
+        - label: 'Coolest thing ever'
+          progress: 95
+
+    - title: 'Javascript'
+      level: 
+        - label: 'Website'
+          progress: 60
+
+    - title: 'Drupal'
+      level: 
+        - label: 'Website'
+          progress: 40
+
+    - title: 'Wordpress'
+      level: 
+        - label: 'Website'
+          progress: 40
+
+- title: 'Language'
+  skill:
+    - title: 'Chinese'
+      level: 
+        - label: 'Mother tongue'
+          progress: 100
+
+    - title: 'Mandarin'
+      level: 
+        - label: 'Mother tongue'
+          progress: 100
+
+
+    - title: 'English'
+      level: 
+        - label: 'Proficient'
+          progress: 100
+
+    - title: 'German'
+      level: 
+        - label: 'Beginner'
+          progress: 30
+

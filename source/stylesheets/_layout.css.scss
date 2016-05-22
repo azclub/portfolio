@@ -3,21 +3,41 @@
   text-align: center;
   position: fixed;
   top: 0;
-  width: 100%;
-  background: $white;
+  right: 0;
+  z-index: 999;
+  @include rem(padding, 0, 3);
   
   .site__nav{
     margin: 0;
-    display: inline-block;
+    position: relative;
+    // display: inline-block;
   }
 }
 
 .site__nav{
   @extend %clean-list-style;
+  @include legacy-pie-clearfix;
+  // text-align: center;
+  float: right;
 
   li{
     display: inline-block;
+    text-transform: uppercase;
+    font-weight:600;
     vertical-align: top;
+  }
+}
+
+// .site-name{
+//   font-weight: 300;
+//   float: left;
+//   text-transform: capitalize;
+// }
+
+.headroom--not-top {
+  .nav__link{
+    @include font-size(1.4);
+    @include rem(padding, 2, 1);
   }
 }
 
@@ -29,14 +49,53 @@
 }
 
 .nav__link{
+  @include transition(.25s);
   @extend %clean-link-style;
-  @include font-size(2.4);
-  font-weight: 900;
+  @include font-size(1.6);
   color: $black;
   display: block;
-  @include rem(padding, 3);
+  position: relative;
+  @include rem(padding, 2);
+
+  @media (min-width: 680px){
+    @include rem(padding, 4, 2);
+    @include font-size(1.6);
+  }
+
+  span{
+    display: inline-block;
+    position: relative;
+
+    &:before{
+      @include transition(.25s);
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: rgba(0,0,0,.8);
+    }
+
+  }
+
+
+  &:hover,
+  &:focus{
+    span:before{
+      width: 100%;
+    }
+  }
 
   &.active{
     text-decoration: line-through;
   }
 }
+
+//footer
+.site__footer{
+  @include font-size(1.2);
+  text-align: center;
+  @include rem(padding, 5, 0);
+}
+
+

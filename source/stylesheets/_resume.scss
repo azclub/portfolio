@@ -1,4 +1,209 @@
+.resume{
+  padding-top: 68px;
+  @media (min-width: 680px){
+    padding-top: 96px;
+  }
+}
+
 .resume__container{
   @extend %container;
-  margin: auto;
+  @include rem(max-width, 90);
+  @include rem(padding-bottom, 10);
+
+  .section__title{
+    @include rem(margin-bottom, 4);
+    color: lighten($black, 15%);
+  }
 }
+
+.resume__photo{
+  @media screen and (min-width: $mobile){
+    position: absolute;
+  }
+}
+.resume__summary{
+  @media screen and (min-width: $mobile){
+    @include rem(padding-left, 34);
+  }
+  @include rem(padding-top, 2);
+  @include rem(margin-bottom, 3);
+  @include font-size(2.4);
+  font-family: $sans;
+  line-height: 1.4;
+}
+
+.resume__photo{
+  @include rem(margin-right, 1);
+}
+
+.resume__contact{
+  @include rem(margin-top, 2);
+
+  a{
+    @include rem(margin-right, .5);
+    @include font-size(1.6);
+    display: inline-block;
+    vertical-align: top;
+    height: 44px;
+    border: 2px solid $black;
+    color: $black;
+    text-decoration: none;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+  .fa{
+    background: $black;
+    position: absolute;
+    @include font-size(2.2);
+    @include rem(padding, .8, 0);
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 100%;
+    color: $white;
+  }
+
+  .contact__linkedin{
+    width: 46px;
+    position: relative;
+  }
+  .contact__email{
+    position: relative;
+    @include rem(padding, .9, 1.5);
+    @include rem(padding-left, 5.8);
+  }
+}
+
+//experience
+.job__company{
+  @include rem(margin-bottom, 1);
+  @media screen and (min-width: $mobile){
+    position: absolute;
+    left: 0;
+  }
+}
+
+.job__summary{
+  font-style: normal;
+  @include rem(padding-top, 1);
+  @include rem(padding-left, 1.5);
+  border-left: 3px solid #EEEEEE;
+  @media screen and (min-width: $mobile){
+    @include rem(padding-left, 4);
+    border-width: 1px;
+    @include rem(margin-left, 24);
+    padding-top: 0;
+  }
+}
+
+.job__title{
+  @include font-size(2.4);
+  font-family: $sans;
+  font-weight: 600;
+  letter-spacing: -0.05em
+}
+
+.job__content{
+  @include rem(margin-bottom, 4);
+  @include rem(margin-top, 1);
+  position: relative;
+  line-height: 1.7;
+}
+
+.awards{
+  @include rem(margin-top, 2);
+  position: relative;
+  display: table;
+}
+
+.awards__logo{
+  vertical-align: middle;
+  display: table-cell;
+  min-width: 150px;
+}
+
+.awards__title{
+  @include font-size(2.4);
+  font-family: $serif;
+  font-style: italic;
+}
+
+.awards__desc{
+  vertical-align: middle;
+  @include font-size(1.4);
+}
+
+.company__label{
+  @include font-size(1.3);
+  color: #AAAAAA;
+}
+
+.company__name{
+  @include font-size(2.4);
+  font-weight: 300;
+  // font-family: $serif;
+}
+
+.company__time{
+  font-weight: 300;
+  // font-family: $serif;
+  @include font-size(1.6);
+}
+
+//skills
+
+.skill-group__title{
+  @extend .job__title;
+}
+
+.skill__title{
+  @include font-size(1.8);
+}
+
+.skill-group{
+  @include legacy-pie-clearfix;
+  @media screen and (min-width: $mobile){
+    float: left;
+    width: 33%;
+  }
+  @include rem(padding-right, 4);
+}
+
+.skill{
+  @include rem(margin-top, 1.5);
+}
+
+.skill__level{
+  background: #ccc;
+  color: $white;
+  position: relative;
+  height: 2px;
+  @include font-size(1.2);
+  @include transition(.25s);
+}
+
+// .skill__level--target{
+//   background: lighten($black, 20%);
+//   position: absolute;
+//   right: 0;
+//   @include rem(padding, .5, 1);
+//   top: 0;
+//   height: 100%;
+// }
+
+.resume__action{
+  @include rem(margin-bottom, 3);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+

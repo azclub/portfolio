@@ -16,25 +16,59 @@ html{
 
 body{
   font-size: 1.6em;
-  padding-top: 96px;
+  color: $black;
+  font-weight: 300;
 }
 
 img{
   max-width: 100%;
 }
 
+b{
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
 //Theme style
 
 %body-text{
-  font-family: $serif;
+  font-family: $sans;
   @include font-size(1.8);
   line-height: 1.5;
-  font-style: italic;
   text-align: left;
 }
 
 %container{
   @include rem(max-width, 117);
+  margin-left: auto;
+  margin-right: auto;
+  @include rem(padding, 1);
+}
+
+.link{
+  color: $black;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+
+  &:hover,
+  &:focus{
+    &:after{
+      width: 0;
+    }
+  }
+
+  &:after{
+    @include transition(.25s);
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+  }
 }
 
 
@@ -65,18 +99,51 @@ img{
 }
 
 .section__title{
+  color: $black;
   @include font-size(4.8);
   margin: 0;
-  font-weight: 900;
+  letter-spacing: -2px;
+  font-weight: 100;
 }
 
 .section__content{
   @extend %body-text;
   @include rem(margin-bottom, 3);
+  @include legacy-pie-clearfix;
+  position: relative;
 }
 
+img{
+  @include transition(1s);
+}
+
+// .lazy-loaded{
+//   @include transition(1s);
+//   @include opacity(1);
+//   @include translate3d(0, 0, 0);
+// }
 
 
-
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 
 

@@ -1,10 +1,25 @@
 ---
 
 ---
+
+
+
+<section class="hero">
+  <div class="hero__content">
+    <h1 class="section__title">Looking For A 
+      <div>
+        <span class="type"></span>?
+      </div>
+      </h1>  
+    <p>Hi there! My name is Helen Fung. I'm currently working at <a class="link" href="https://www.linkedin.com/company/magnetic-asia-ltd" target="_blank" title="Linkedin Profile of Magnetia Asia">Magnetic Asia</a>.</p> 
+  </div>
+
+</section>
+
 <section class="home">
   <% data.works.work.each do |f| %>
-    <% link_to("/works/#{f.name.parameterize}") do %>
-      <figure class="work <%=f.name.parameterize%>">
+    <% link_to("/works/#{f.name.parameterize}", :class => 'work') do %>
+        <div class="work__background--small" style="background-image: url(/images/home/<%=f.name.parameterize%>.jpg);"></div>
         <picture class="work__image">
           <div class="logo">
             <%= image_tag("logos/#{f.name.parameterize}.png", :alt => f.name) %>
@@ -15,7 +30,6 @@
             
           </div>
         <% end %>
-      </figure>
     <% end %>
   <% end %>
 </section>
