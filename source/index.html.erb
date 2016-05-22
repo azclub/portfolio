@@ -18,11 +18,11 @@
 
 <section class="home">
   <% data.works.work.each do |f| %>
-    <% link_to("/works/#{f.name.parameterize}", :class => 'work') do %>
-        <div class="work__background--small" style="background-image: url(/images/home/<%=f.name.parameterize%>.jpg);"></div>
+    <% link_to("works/#{f.name.parameterize}", :class => 'work') do %>
+        <div class="work__background--small" style="background-image: url(images/home/<%=f.name.parameterize%>.jpg);"></div>
         <picture class="work__image">
           <div class="logo">
-            <%= image_tag("logos/#{f.name.parameterize}.png", :alt => f.name) %>
+            <%= image_tag("images/logos/#{f.name.parameterize}.png", :alt => f.name) %>
           </div>
         </picture>
         <% if f.award %>

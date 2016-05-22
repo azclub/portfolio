@@ -7,33 +7,6 @@ compass_config do |config|
   config.output_style = :compact
 end
 
-###
-# Page options, layouts, aliases and proxies
-###
-
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
-
-# Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
-
-###
-# Helpers
-###
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
 
 activate :directory_indexes
 
@@ -50,13 +23,6 @@ end
 configure :development do
   activate :livereload
 end
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
 
 set :css_dir, 'stylesheets'
 
@@ -77,7 +43,25 @@ configure :build do
 
   # Use relative URLs
   activate :relative_assets
+end
 
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+activate :deploy do |deploy|
+
+  deploy.build_before = true # default: false
+  deploy.method = :git
+  # remote is optional (default is "origin")
+  # run `git remote -v` to see a list of possible remotes
+  # deploy.remote = "some-other-remote-name"
+
+  # branch is optional (default is "gh-pages")
+  # run `git branch -a` to see a list of possible branches
+  # deploy.branch = "some-other-branch-name"
+
+  # strategy is optional (default is :force_push)
+  # deploy.strategy = :submodule
+  # Optional Settings
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.branch   = 'custom-branch' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
