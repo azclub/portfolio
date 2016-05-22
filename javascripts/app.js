@@ -1,0 +1,1 @@
+$(function(){var e=document.querySelector(".site__header"),t=new Headroom(e);t.init(),$("work__photos img, .work__background--small").lazyLoadXT(),$(".type").typed({strings:["Web Designer","Front-end Developer","UX Lover","Geeky Gamer","Scubar Diver","...Chance To Build Sth Beatiful"],typeSpeed:1,startDelay:1e3,backDelay:1500,contentType:"text"})});
