@@ -45,6 +45,10 @@ configure :build do
   activate :relative_assets
 end
 
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-47253530-1'
+end
+
 activate :deploy do |deploy|
 
   deploy.build_before = true # default: false

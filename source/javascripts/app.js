@@ -91,7 +91,7 @@ $(function(){
 // }
 
 $(".type").typed({
-  strings: ["Web Designer", "Front-end Developer", "UX Lover", "Geeky Gamer", "Scubar Diver", "...Chance To Build Sth Beatiful"],
+  strings: ["Web Designer", "Front-end Developer", "UX Lover", "Geeky Gamer", "Scuba Diver", "...Chance To Build Sth Beatiful"],
   typeSpeed: 1,
   startDelay: 1000,
   backDelay: 1500,

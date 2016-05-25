@@ -6,6 +6,7 @@ gem "middleman", "~>3.3.10"
 gem 'compass', "~> 1.0.3"
 gem "font-awesome-sass"
 gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-google-analytics'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
