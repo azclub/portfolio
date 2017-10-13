@@ -26,12 +26,6 @@
 
 
   <body class="<%= page_classes %>">
-    <header class="site__header">
-      <ul class="site__nav">
-        <li><%= link_to("<span>Works</span>", "/" , :class => 'nav__link') %></li>
-        <li><%= link_to("<span>Résumé</span>", "/resume" , :class => 'nav__link') %></li>
-      </ul>
-    </header>
     <%= yield %>
     
     <%= javascript_include_tag  "all" %>
